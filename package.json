@@ -1,0 +1,16 @@
+{
+  "name": "devcon-ppt",
+  "version": "1.0.0",
+  "description": "DevCon Presentation",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron-prebuilt": "^1.4.6"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "reveal": "0.0.4"
+  }
+}

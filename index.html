@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/white.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <!-- slide 1 -->
+                    <p>One Throne to Rule Them All - Electron is coming!</p> 
+                    <h1><u>Electron</u></h1>
+                    <h3>Mohammad Rafi</h3>
+                </section>
+                <section>
+                  <h1>Prequisites</h1>
+                  <video controls>
+                    <source data-src="data/video.mp4" type="video/mp4" autoplay/>
+                    Your browser does not support the video tag
+                  </video>
+                </section>
+                <section>
+                  <h1>Code</h1>
+                    <pre>
+                        <code class='js' data-trim>
+  const {app, BrowserWindow} = require('electron')
+  // Create the browser window.
+  win = new BrowserWindow({width: 800, height: 600})
+
+  // and load the index.html of the app.
+  win.loadURL(url.format({
+    pathname: path.join(__dirname, 'index.html'),
+    protocol: 'file:',
+    slashes: true
+  }))
+                        </code>
+                    </pre>
+                </section>
+            </div>
+        </div>
+
+        <script src="js/reveal.js"></script> 
+        <script src="js/highlight.js"></script> 
+        <script>
+            hljs.initHighlightingOnLoad();
+            Reveal.initialize({
+                controls: false
+              }
+            );
+        </script>
+    </body>
+</html>
