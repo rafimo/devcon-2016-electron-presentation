@@ -1,8 +1,11 @@
 <html>
     <head>
+        <link rel="stylesheet" href="css/application.css">
         <link rel="stylesheet" href="css/reveal.css">
         <link rel="stylesheet" href="css/theme/white.css">
-        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+        <link rel="stylesheet" href="node_modules/highlight.js/styles/default.css">
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" >
     </head>
     <body>
         <div class="reveal">
@@ -23,7 +26,7 @@
                 <section>
                   <h1>Code</h1>
                     <pre>
-                        <code class='js' data-trim>
+                        <code class='js' data-trim contenteditable>
   const {app, BrowserWindow} = require('electron')
   // Create the browser window.
   win = new BrowserWindow({width: 800, height: 600})
@@ -37,12 +40,28 @@
                         </code>
                     </pre>
                 </section>
+                <section>
+                  <h2>Cross Platform Application</h2>
+                  <ul>
+                  <li><i class="fa fa-windows fa-3" aria-hidden="true"></i></li>
+                  <li><i class="fa fa-linux fa-3" aria-hidden="true"></i></li>
+                  <li><i class="fa fa-apple fa-3" aria-hidden="true"></i></li>
+                  </ul>
+                </section>
+                <section>
+                    <h2>Directory Structure</h2>
+                    <button class="btn btn-primary" type="button" onclick="Files.getAll()">
+                        List Files
+                    </button>
+                    <div id="files"></div>
+                </section>
             </div>
         </div>
 
         <script src="js/reveal.js"></script> 
-        <script src="js/highlight.js"></script> 
+        <script src="js/files.js"></script>
         <script>
+            var hljs = require('highlight.js');
             hljs.initHighlightingOnLoad();
             Reveal.initialize({
                 controls: false

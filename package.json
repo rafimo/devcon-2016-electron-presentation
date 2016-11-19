@@ -4,13 +4,22 @@
   "description": "DevCon Presentation",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package-mac": "electron-packager . $npm_package_productName --platform=darwin --overwrite",
+    "package-win": "electron-packager . $npm_package_productName --platform=win32 --arch=x64 --overwrite"
   },
   "devDependencies": {
     "electron-prebuilt": "^1.4.6"
   },
   "license": "MIT",
   "dependencies": {
-    "reveal": "0.0.4"
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "glob": "^7.1.1",
+    "highlight.js": "^9.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.cerner.com/MR039311/devcon-2016-electron-presentation"
   }
 }
