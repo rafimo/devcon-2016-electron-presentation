@@ -9,7 +9,7 @@
     "package-win": "electron-packager . $npm_package_productName --platform=win32 --arch=x64 --overwrite"
   },
   "devDependencies": {
-    "electron-prebuilt": "^1.4.6"
+    "electron": "^1.4.7"
   },
   "license": "MIT",
   "dependencies": {
