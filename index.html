@@ -1,8 +1,8 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/application.css">
-        <link rel="stylesheet" href="css/reveal.css">
-        <link rel="stylesheet" href="css/theme/white.css">
+        <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="node_modules/reveal.js/css/theme/white.css">
         <link rel="stylesheet" href="node_modules/highlight.js/styles/default.css">
         <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" >
@@ -58,9 +58,9 @@
             </div>
         </div>
 
-        <script src="js/reveal.js"></script> 
         <script src="js/files.js"></script>
         <script>
+            var Reveal = require('reveal.js');
             var hljs = require('highlight.js');
             hljs.initHighlightingOnLoad();
             Reveal.initialize({
