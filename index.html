@@ -20,15 +20,19 @@
                 </section>
                 <section>
                     <h2>Web Applications</h2>
-                     <p class="fragment">Cross Platform</p>
-                     <p class="fragment">No Remote Product Installation/Maintenance</p>
-                     <p class="fragment">Relatively more secure from piracy</p>
+                    <ul>
+                        <li>Cross Platform</li>
+                        <li>No Product Installation</li>
+                        <li>Well established ecosystem</li>
+                    </ul>
                 </section>
                 <section>
                     <h2>Desktop Applications</h2>
-                     <p class="fragment">Offline Availability</p>
-                     <p class="fragment">Local Resources</p>
-                     <p class="fragment">Privacy</p>
+                    <ul>
+                        <li>Offline Availability</li>
+                        <li>Local Resources</li>
+                        <li>Privacy</li>
+                    </ul>
                 </section>
                 <section>
                     <h2>Desktop Apps</h2>
@@ -59,8 +63,26 @@
                     </blockquote>
                 </section>
                 <section>
-                  <h1>Prequisites</h1>
-
+                  <h2>Architecture</h2>
+                  <ul>
+                      <li>Chromium</li>
+                      <li>Node.js</li>
+                      <li>V8</li>
+                  </ul>
+                </section>
+                <section>
+                  <h2>Processes</h2>
+                  <ul>
+                      <li>Main</li>
+                      <li>Renderer</li>
+                  </ul>
+                </section>
+                <section>
+                    <h2>Directory Structure</h2>
+                    <button class="btn btn-primary" type="button" onclick="App.getAllFiles()">
+                        List Files
+                    </button>
+                    <div id="files"></div>
                 </section>
                 <section>
                   <h1>Code</h1>
@@ -80,11 +102,9 @@
                     </pre>
                 </section>
                 <section>
-                    <h2>Directory Structure</h2>
-                    <button class="btn btn-primary" type="button" onclick="Files.getAll()">
-                        List Files
-                    </button>
-                    <div id="files"></div>
+                    <button class="btn btn-primary" type="button" onclick="App.triggerNotification()">
+                        Trigger Notification
+                    </button>                    
                 </section>
                 <section data-background-video="data/video.mp4">
                   <h1>Demo</h1>
@@ -104,15 +124,7 @@
             </div>
         </div>
 
-        <script src="js/files.js"></script>
-        <script>
-            var Reveal = require('reveal.js');
-            var hljs = require('highlight.js');
-            hljs.initHighlightingOnLoad();
-            Reveal.initialize({
-                controls: false
-              }
-            );
-        </script>
+        <script src="js/application.js"></script>
+        <script>App.init()</script>
     </body>
 </html>
