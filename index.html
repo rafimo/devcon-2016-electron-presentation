@@ -6,22 +6,61 @@
         <link rel="stylesheet" href="node_modules/highlight.js/styles/default.css">
         <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" >
+        <title>Electron Presentation</title>
     </head>
     <body>
         <div class="reveal">
             <div class="slides">
+                <section data-background-video="data/launch.mp4" data-background-video-loop="true" data-background-color="#2c2d3c">
+                    <!-- I cheated here.. instead of embedding a svg, this is a screen-capture of the electron home-page :) -->
+                </section>
                 <section>
-                    <!-- slide 1 -->
-                    <p>One Throne to Rule Them All - Electron is coming!</p> 
                     <h1><u>Electron</u></h1>
-                    <h3>Mohammad Rafi</h3>
+                    <a href="#">Mohammad Rafi</a>
+                </section>
+                <section>
+                    <h2>Web Applications</h2>
+                     <p class="fragment">Cross Platform</p>
+                     <p class="fragment">No Remote Product Installation/Maintenance</p>
+                     <p class="fragment">Relatively more secure from piracy</p>
+                </section>
+                <section>
+                    <h2>Desktop Applications</h2>
+                     <p class="fragment">Offline Availability</p>
+                     <p class="fragment">Local Resources</p>
+                     <p class="fragment">Privacy</p>
+                </section>
+                <section>
+                    <h2>Desktop Apps</h2>
+                    <ul>
+                        <li>Code Editors</li>
+                        <li>Office Software</li>
+                        <li>Photo/Video Editing Software</li>
+                        <li>Video Games</li>
+                        <li>Browsers!</li>
+                    </ul>
+                </section>
+                <section>
+                  <h2>Making Desktop Apps</h2>
+                  <ul>
+                  <li><i class="fa fa-windows fa-3" aria-hidden="true"></i>&nbsp; &nbsp; .NET, WPF, C++</li>
+                  <li><i class="fa fa-linux fa-3" aria-hidden="true"></i>&nbsp; &nbsp; X11, C++</li>
+                  <li><i class="fa fa-apple fa-3" aria-hidden="true"></i>&nbsp; &nbsp; Cocoa, Swift</li>
+                  </ul>
+                </section>
+                <section>
+                    <h2>Confluence !</h2>
+                    Web application available as a Desktop App.
+                </section>
+                <section>
+                    <h2>Electron</h2>
+                    <blockquote>
+                        Electron is a framework for creating native applications with web technologies like JavaScript, HTML, and CSS.
+                    </blockquote>
                 </section>
                 <section>
                   <h1>Prequisites</h1>
-                  <video controls>
-                    <source data-src="data/video.mp4" type="video/mp4" autoplay/>
-                    Your browser does not support the video tag
-                  </video>
+
                 </section>
                 <section>
                   <h1>Code</h1>
@@ -41,19 +80,26 @@
                     </pre>
                 </section>
                 <section>
-                  <h2>Cross Platform Application</h2>
-                  <ul>
-                  <li><i class="fa fa-windows fa-3" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-linux fa-3" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-apple fa-3" aria-hidden="true"></i></li>
-                  </ul>
-                </section>
-                <section>
                     <h2>Directory Structure</h2>
                     <button class="btn btn-primary" type="button" onclick="Files.getAll()">
                         List Files
                     </button>
                     <div id="files"></div>
+                </section>
+                <section data-background-video="data/video.mp4">
+                  <h1>Demo</h1>
+                </section>
+                <section>
+                    <video controls>
+                        <source data-src="data/video.mp4" type="video/mp4"/>
+                    </video>
+                </section>
+                <section>
+                    <h1><i class="fa fa-question" aria-hidden="true"></i></h1>
+                    <p class="fragment">
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                    </p>
                 </section>
             </div>
         </div>

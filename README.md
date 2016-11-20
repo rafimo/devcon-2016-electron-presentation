@@ -2,6 +2,8 @@
 
 A Presentation on Electron in Electron
 
+```
 npm install
 npm start
+```
 

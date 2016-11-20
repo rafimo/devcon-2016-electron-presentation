@@ -5,11 +5,12 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "package-mac": "electron-packager . $npm_package_productName --platform=darwin --overwrite",
-    "package-win": "electron-packager . $npm_package_productName --platform=win32 --arch=x64 --overwrite"
+    "package-mac": "electron-packager . 'DevCon Presentation' --platform=darwin --overwrite",
+    "package-win": "electron-packager . 'DevCon Presentation' --platform=win32 --arch=x64 --overwrite"
   },
   "devDependencies": {
-    "electron": "^1.4.7"
+    "electron": "^1.4.7",
+    "electron-packager": "^8.3.0"
   },
   "license": "MIT",
   "dependencies": {

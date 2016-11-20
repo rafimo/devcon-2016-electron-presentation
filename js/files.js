@@ -8,7 +8,8 @@ Files.getAll = function() {
     element.innerHTML = "";
     files.forEach(function(file) {
       element.innerHTML = element.innerHTML + 
-        "<button type='button' value='" + file + "'>" + file + "</button>";
+        "<button type='button' class='btn btn-link' onclick='Files.readContent(\"" 
+          + file + "\")'>" + file + "</button>";
     });
   });
 }
@@ -17,6 +18,6 @@ Files.getAll = function() {
 Files.readContent = function(name) {
   const fs = require('fs');
   fs.readFile(name, (err, data) => {
-    console.log(data);
+    console.log(data.toString());
   })
 }
