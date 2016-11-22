@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, globalShortcut, dialog, ipcMain} = require('electron')
 const path = require('path')
 const url = require('url')
 
@@ -27,6 +27,10 @@ function createWindow () {
     // when you should delete the corresponding element.
     win = null
   })
+
+  globalShortcut.register('CommandOrControl+Alt+I', function () {
+    win.webContents.openDevTools();
+  })
 }
 
 // This method will be called when Electron has finished
@@ -49,4 +53,20 @@ app.on('activate', () => {
   if (win === null) {
     createWindow()
   }
+})
+
+app.on('will-quit', function () {
+  globalShortcut.unregisterAll()
+})
+
+ipcMain.on('open-dialog', function (event) {
+  const options = {
+    type: 'info',
+    title: 'Information',
+    message: "This is a subliminal message. Isn't this presentation good?",
+    buttons: ['Yes', 'yes']
+  }
+  dialog.showMessageBox(options, function(index) {
+    console.log("You choose" + index);
+  })
 })

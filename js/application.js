@@ -54,4 +54,19 @@ App.init = function() {
       })
     }
   })
+
+  // add a right-click context menu
+  const {remote} = require('electron')
+  const {Menu, MenuItem} = remote
+  const ipc = require('electron').ipcRenderer
+
+  const menu = new Menu()
+  menu.append(new MenuItem({label: 'Launch A Dialog', click() {
+    ipc.send('open-dialog');
+  }}))
+
+  window.addEventListener('contextmenu', (e) => {
+    e.preventDefault()
+    menu.popup(remote.getCurrentWindow())
+  }, false)
 }
