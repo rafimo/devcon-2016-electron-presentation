@@ -85,7 +85,42 @@
                     <div id="files"></div>
                 </section>
                 <section>
-                  <h1>Code</h1>
+                  <h1>package.json</h1>
+                    <pre>
+                        <code class='json' data-trim contenteditable>
+{
+  "name": "devcon-ppt",
+  "version": "1.0.0",
+  "description": "DevCon Presentation",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . DevCon-Presentation --platform=darwin --overwrite",
+    "package-win": "electron-packager . DevCon-Presentation --platform=win32 --arch=x64 --overwrite",
+    "package-linux": "electron-packager . DevCon-Presentation --platform=linux --arch=x64 --overwrite"
+  },
+  "devDependencies": {
+    "electron": "^1.4.7",
+    "electron-packager": "^8.3.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "glob": "^7.1.1",
+    "highlight.js": "^9.8.0",
+    "reveal.js": "^3.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.cerner.com/MR039311/devcon-2016-electron-presentation"
+  }
+}
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                  <h1>Launch a Window</h1>
                     <pre>
                         <code class='js' data-trim contenteditable>
   const {app, BrowserWindow} = require('electron')
@@ -104,6 +139,9 @@
                 <section>
                     <h1>Show me the money</h1>
                     <i class="fa fa-magic" aria-hidden="true"></i>
+                </section>
+                <section>
+                    <h1>Look at Me</h1>
                 </section>
                 <section>
                     <section>
