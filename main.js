@@ -64,7 +64,7 @@ ipcMain.on('open-dialog', function (event) {
     type: 'info',
     title: 'Information',
     message: "This is a subliminal message. Isn't this presentation good?",
-    buttons: ['Yes', 'yes']
+    buttons: ['Agree', 'True']
   }
   dialog.showMessageBox(options, function(index) {
     console.log("You choose" + index);
