@@ -10,7 +10,7 @@
     "package-linux": "electron-packager . DevCon-Presentation --platform=linux --arch=x64 --overwrite"
   },
   "devDependencies": {
-    "electron": "^1.4.7",
+    "electron": "^9.1.0",
     "electron-packager": "^8.3.0"
   },
   "license": "MIT",
